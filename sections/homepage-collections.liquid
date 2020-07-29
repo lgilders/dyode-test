@@ -1,1 +1,67 @@
-TEST homepage collections
+<div id="collections-section">
+    <div id="collections-wrapper">
+    {% for block in section.blocks %}
+        {%- assign desktop = {{ block.settings.image }} -%} 
+        {%- assign mobile = {{ block.settings.mobile_image }} -%}
+        <div class="collection-block">
+            <div class="desktop-img">
+                <img src="{{ desktop | img_url: 'master' }}" alt="{{ block.settings.image_alt_text }}" />
+            </div>
+            <div class="mobile-img">
+                <img src="{{ {% if mobile %} mobile {% else %} desktop {% endif %} | img_url: 'master' }}" alt="{{ block.settings.image_alt_text }}" />
+            </div>
+            <div class="collection-link">
+                <a href="{{ block.settings.cta_link }}">{{ block.settings.cta_text }}</a>
+            </div>
+        </div>
+    {% endfor %}
+    </div>
+</div>
+
+{% schema %}
+{
+"name": "Collections Section",
+"class": "index-section section-flush",
+"max_blocks": 3,
+"settings": [],
+"blocks": [
+{
+    "type": "block",
+    "name": "Collection Block",
+    "settings": [
+    {
+    "type": "image_picker",
+    "id": "image",
+    "label": "Desktop Image"
+    },
+    {
+    "type": "image_picker",
+    "id": "mobile_image",
+    "label": "Mobile Image"
+    },
+    {
+    "type": "text",
+    "id": "image_alt_text",
+    "label": "Image Alt Text"
+    },
+    {
+        "type": "text",
+        "id": "cta_text",
+        "label": "CTA Text"
+    },
+    {
+        "type": "url",
+        "id": "cta_link",
+        "label": "CTA Link"
+    }
+]
+}
+],
+"presets": [
+{
+"name": "Collections Section",
+"category": "Index"
+}
+]
+}
+{% endschema %}
