@@ -4,18 +4,18 @@
         {%- assign desktop = block.settings.image -%} 
         {%- assign mobile = block.settings.mobile_image -%}
         <div class="collection-block">
-            <div class="desktop-img">
-                <img src="{{ desktop | img_url: 'master' }}" alt="{{ block.settings.image_alt_text }}" />
-            </div>
-            <div class="mobile-img">
-            {% if mobile == blank %}
-                {% assign mobile = block.settings.image %}
-            {% endif %}
-                <img src="{{ mobile | img_url: 'master' }}" alt="{{ block.settings.image_alt_text }}" />
-            </div>
-            <div class="collection-link">
-                <a href="{{ block.settings.cta_link }}">{{ block.settings.cta_text }}</a>
-            </div>
+            <a href="{{ block.settings.cta_link }}">
+                <div class="desktop-img">
+                    <img src="{{ desktop | img_url: 'master' }}" alt="{{ block.settings.image_alt_text }}" />
+                </div>
+                <div class="mobile-img">
+                {% if mobile == blank %}
+                    {% assign mobile = block.settings.image %}
+                {% endif %}
+                    <img src="{{ mobile | img_url: 'master' }}" alt="{{ block.settings.image_alt_text }}" />
+                </div>
+                <div class="cta">{{ block.settings.cta_text }}</div>
+            </a>
         </div>
     {% endfor %}
     </div>
