@@ -1,0 +1,21 @@
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--primary);
+    padding: 0.5rem 1rem;
+
+    #desktop-navigation {
+        display: inline-flex;
+
+        li a {
+            padding: 0 0 0 2.5rem;
+            font-family: var(--sans-serif);
+            font-weight: 100;
+            font-size: 1.75rem;
+            line-height: 2.125rem;
+            letter-spacing: 0;
+            text-transform: capitalize;
+        }
+    }
+}

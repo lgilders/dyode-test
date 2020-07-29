@@ -1,1 +1,52 @@
-TEST header
+{%- comment -%}
+This is a required section for the Shopify Theme Store.
+It is available in the "Header" section in the theme editor.
+{%- endcomment -%}
+
+<header>
+    <div class="logo">
+        <img src="{{ section.settings.logo | img_url: 'master' }}" />    
+    </div>
+
+    {% comment %} Desktop Navigation {% endcomment %}
+    <nav role="navigation">
+    <ul id="desktop-navigation">
+        {% for link in linklists[section.settings.menu].links %}
+            <li class="nav-item {% if link.links != blank %} has-dropdown{% endif %} {% if forloop.index == 6 or forloop.index == 8 %} nav-divider{% endif %}">
+            <a href="{{ link.url }}">
+                {{ link.title }}
+            </a>
+            {% if link.links != blank %}
+                <span class="nav-dropdown">
+                {% for childlink in link.links %}
+                    <a href="{{ childlink.url }}">
+                        {{ childlink.title }}
+                    </a>
+                    {% endfor %}
+                </span>
+            {% endif %}
+            </li>
+        {% endfor %}
+    </ul>
+    </nav>
+</header>
+
+
+{% schema %}
+{
+"name": "Header",
+"settings": [
+    {
+    "type": "image_picker",
+    "id": "logo",
+    "label": "Logo image"
+    },
+    {
+    "type": "link_list",
+    "id": "menu",
+    "label": "Menu",
+    "default": "main-menu"
+    }
+]
+}
+{% endschema %}
