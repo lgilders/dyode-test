@@ -1,14 +1,17 @@
 <div id="collections-section">
     <div id="collections-wrapper">
     {% for block in section.blocks %}
-        {%- assign desktop = {{ block.settings.image }} -%} 
-        {%- assign mobile = {{ block.settings.mobile_image }} -%}
+        {%- assign desktop = block.settings.image -%} 
+        {%- assign mobile = block.settings.mobile_image -%}
         <div class="collection-block">
             <div class="desktop-img">
                 <img src="{{ desktop | img_url: 'master' }}" alt="{{ block.settings.image_alt_text }}" />
             </div>
             <div class="mobile-img">
-                <img src="{{ {% if mobile %} mobile {% else %} desktop {% endif %} | img_url: 'master' }}" alt="{{ block.settings.image_alt_text }}" />
+            {% if mobile == blank %}
+                {% assign mobile = block.settings.image %}
+            {% endif %}
+                <img src="{{ mobile | img_url: 'master' }}" alt="{{ block.settings.image_alt_text }}" />
             </div>
             <div class="collection-link">
                 <a href="{{ block.settings.cta_link }}">{{ block.settings.cta_text }}</a>
