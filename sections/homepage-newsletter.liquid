@@ -1,1 +1,62 @@
-TEST newsletter
+<div id="newsletter-section">
+    <div id="newsletter-description">
+        <div class="newsletter-heading">
+            <div class="newsletter-icon"><img src="{{ section.settings.image | img_url: 'master' }}" /></div>
+            <h1>{{ section.settings.headline }}</h1>
+        </div>
+
+        <div class="newsletter-signup">
+            <h3>{{ section.settings.subheading }}</h3>
+            <div class="form-wrapper">
+                <form>
+                    <input type="email" id="email" name="email" placeholder="{{ section.settings.placeholder_text }}" />
+                    <input type="submit" value="{{ section.settings.cta_text }}" />
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% schema %}
+{
+"name": "Newsletter Section",
+"class": "index-section section-flush",
+"settings": [
+    {
+    "type": "image_picker",
+    "id": "image",
+    "label": "Mail Icon"
+    },
+    {
+        "type": "text",
+        "id": "headline",
+        "label": "Headline",
+        "default": "Sign up & stay connected"
+    },
+    {
+        "type": "text",
+        "id": "subheading",
+        "label": "Subheading",
+        "default": "Sign up for the newsletter and get 20% off! Get access to exclusive offers and be the first to know when new stuff drops."
+    },
+    {
+        "type": "text",
+        "id": "placeholder_text",
+        "label": "Placeholder Text",
+        "default": "Your Email Address"
+    },
+    {
+        "type": "text",
+        "id": "cta_text",
+        "label": "CTA Text",
+        "default": "Subscribe"
+    }
+],
+"presets": [
+{
+"name": "Newsletter Section",
+"category": "Index"
+}
+]
+}
+{% endschema %}
