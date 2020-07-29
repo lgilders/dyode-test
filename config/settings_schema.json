@@ -1,0 +1,79 @@
+[
+  {
+    "name":"theme_info",
+    "theme_name":"Starter theme",
+    "theme_version":"1.0.0",
+    "theme_author":"Shopify",
+    "theme_documentation_url":"https:\/\/github.com\/Shopify\/starter-theme",
+    "theme_support_url":"https:\/\/github.com\/Shopify\/starter-theme\/issues",
+    "theme_packaged_with":"@shopify\/slate-tools@1.0.0-beta.3"
+  },
+  {
+    "name":"Social Media",
+    "settings":[
+      {
+        "type":"header",
+        "content":"Social Sharing"
+      },
+      {
+        "type": "image",
+        "id": "social_twitter_icon",
+        "label": "Twitter icon"
+      },
+      {
+        "type": "text",
+        "id": "social_twitter_link",
+        "label": "Twitter link"
+      },
+      {
+        "type": "image",
+        "id": "social_facebook_icon",
+        "label": "Facebook icon"
+      },
+      {
+        "type": "text",
+        "id": "social_facebook_link",
+        "label": "Facebook link"
+      },
+      {
+        "type": "image",
+        "id": "social_instagram_icon",
+        "label": "Instagram icon"
+      },
+      {
+        "type": "text",
+        "id": "social_instagram_link",
+        "label": "Instagram link"
+      }
+    ]
+  },
+  {
+    "name":"Global Banner",
+    "settings":[
+      {
+        "type": "checkbox",
+        "id": "gb_enable",
+        "label": "Enable Banner",
+        "default": true
+      },
+      {
+        "type": "color",
+        "id": "gb_background_color",
+        "label": "Background Color",
+        "default": "#000000"
+      },
+      {
+        "type": "color",
+        "id": "gb_text_color",
+        "label": "Text Color",
+        "default": "#ffffff"
+      },
+      {
+        "type": "text",
+        "id": "gb_copy",
+        "label": "Banner Text",
+        "default": "FREE SHIPPING ON ALL ORDERS OVER $75"
+      }
+    ]
+  }
+]

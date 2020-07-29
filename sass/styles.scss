@@ -1,0 +1,21 @@
+/*========== Reset Browser Styles ==========*/
+@import './utilities/reset.scss';
+
+/*========== Global Variables ==========*/
+@import './utilities/variables.scss';
+
+/*========== Global Stylesheet ==========*/
+@import './utilities/global.scss';
+
+/*========== Global Banner ==========*/
+@import './components/global-banner.scss';
+
+/*========== Header ==========*/
+@import './components/header.scss';
+
+/*========== Footer ==========*/
+@import './components/footer.scss';
+
+/*========== Homepage ==========*/
+@import './pages/homepage.scss';
+

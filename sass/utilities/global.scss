@@ -1,0 +1,112 @@
+html { scroll-behavior: smooth; }
+
+body {
+    background-color: var(--white);
+    color: var(--black);
+    font-family: var(--sans-serif);
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    letter-spacing: 0;
+}
+
+h1, .h1 {
+    font-family: var(--serif);
+    font-weight: 400;
+    font-size: 3.125rem;
+    line-height: 5.813rem;
+    letter-spacing: 0;
+    margin: 0;
+    padding: 0;
+}
+
+h2, .h2 {
+    font-family: var(--sans-serif);
+    font-weight: 400;
+    font-size: 2.5rem;
+    line-height: 3rem;
+    letter-spacing: 0;
+    margin: 0;
+    padding: 0;
+}
+
+h3, .h3 {
+    font-family: var(--sans-serif);
+    font-weight: 400;
+    font-size: 1.875rem;
+    line-height: 2.125rem;
+    letter-spacing: 0;
+    margin: 0;
+    padding: 0;
+}
+
+h4, .h4 {
+    font-family: var(--sans-serif);
+    font-weight: 400;
+    font-size: 1.25rem;
+    line-height: 1.5rem;
+    letter-spacing: 0;
+    margin: 0;
+    padding: 0;
+}
+
+h5, .h5 {
+    font-family: var(--sans-serif);
+    font-weight: 400;
+    font-size: 0.625rem;
+    line-height: 0.875rem;
+    letter-spacing: 0;
+    margin: 0;
+    padding: 0;
+}
+
+h6, .h6 {
+    font-family: var(--sans-serif);
+    font-weight: 400;
+    font-size: 0.625rem;
+    line-height: 0.875rem;
+    letter-spacing: 0;
+    margin: 0;
+    padding: 0;
+}
+
+p {
+    font-family: var(--sans-serif);
+    font-size: 1rem;
+    line-height: 1.188rem;
+    letter-spacing: 0;
+}
+
+a, .link {
+    color: var(--white);
+    font-family: var(--serif);
+    letter-spacing: 0;
+    text-decoration: none;
+}
+
+ul, ol, dl {
+    font-family: var(--sans-serif);
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+li, dd {
+    font-family: var(--sans-serif);
+}
+
+blockquote, .blockquote {
+    font-family: var(--serif);
+}
+
+button, .button {
+    font-family: var(--serif);
+}
+
+figure {
+    font-family: var(--serif);
+}
+
+figcaption, .caption {
+    font-family: var(--sans-serif);
+}

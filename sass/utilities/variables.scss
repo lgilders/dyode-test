@@ -1,0 +1,17 @@
+/* Typography */
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;700&family=Pacifico&display=swap');
+
+:root {
+    --sans-serif: 'Lato', 'Lucida Grande', Tahoma, sans-serif;
+    --serif: 'Pacifico', 'Comic Sans MS', cursive, serif;
+}
+
+/* Colors */
+:root {
+    --primary: #10504F; // Green
+    --secondary: #312C30; // Dark gray
+    --tertiary: #929292; // Light gray
+    --quaternary: #D8D8D8; // Lightest gray rgba(216,216,216,0.7)
+    --black: #000000; // Black
+    --white: #ffffff; // White
+}
