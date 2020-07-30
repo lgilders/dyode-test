@@ -36,9 +36,7 @@ header {
         }
     }
 
-    .cart-icon {
-        max-width: 11px;
-    }
+    .cart-icon { max-width: 11px; }
 }
 
 /*========== Show/Hide Desktop/Mobile Start ==========*/
@@ -95,21 +93,15 @@ header {
         width: 100%;
     }
     
-    .menu-icon .navicon:before {
-        top: 5px;
-    }
+    .menu-icon .navicon:before { top: 5px; }
     
-    .menu-icon .navicon:after {
-        top: -5px;
-    }
+    .menu-icon .navicon:after { top: -5px; }
 }
 /*========== Mobile Icon End ============*/
 
 /*========== Mobile Button Start ============*/
 header{
-    .menu-btn {
-        display: none;
-    }
+    .menu-btn { display: none; }
     
     .menu-btn:checked ~ .menu {
         display: block;
@@ -131,17 +123,11 @@ header{
         }
     }
     
-    .menu-btn:checked ~ .menu-icon .navicon {
-        background: transparent;
-    }
+    .menu-btn:checked ~ .menu-icon .navicon { background: transparent; }
     
-    .menu-btn:checked ~ .menu-icon .navicon:before {
-        transform: rotate(-45deg);
-    }
+    .menu-btn:checked ~ .menu-icon .navicon:before { transform: rotate(-45deg); }
     
-    .menu-btn:checked ~ .menu-icon .navicon:after {
-        transform: rotate(45deg);
-    }
+    .menu-btn:checked ~ .menu-icon .navicon:after { transform: rotate(45deg); }
     
     .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:before,
     .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {

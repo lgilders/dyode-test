@@ -4,14 +4,15 @@
             <ul class="nav-container">
                 {% for link in linklists[section.settings.menu_first].links %}
                     {% if link.links != blank %}
-                        <input type="checkbox" id="nav-item-{{ forloop.index }}" />
-                        <label for="nav-item-{{ forloop.index }}">Accordion One</label>
+                        <input type="checkbox" id="nav-item-first" />
+                        <label for="nav-item-first"><span class="navicon"></span></label>
                     {% endif %}
 
                     <li class="nav-item {% if link.links != blank %} has-dropdown{% endif %} {% if forloop.index == 6 or forloop.index == 8 %} nav-divider{% endif %}">
                     <a href="{{ link.url }}">
                         {{ link.title }}
                     </a>
+
                     {% if link.links != blank %}
                         <span class="nav-dropdown">
                         {% for childlink in link.links %}
@@ -30,14 +31,15 @@
             <ul class="nav-container">
                 {% for link in linklists[section.settings.menu_second].links %}
                     {% if link.links != blank %}
-                        <input type="checkbox" id="nav-item-{{ forloop.index }}" />
-                        <label for="nav-item-{{ forloop.index }}">Accordion One</label>
+                        <input type="checkbox" id="nav-item-second" />
+                        <label for="nav-item-second"><span class="navicon"></span></label>
                     {% endif %}
 
                     <li class="nav-item {% if link.links != blank %} has-dropdown{% endif %} {% if forloop.index == 6 or forloop.index == 8 %} nav-divider{% endif %}">
                     <a href="{{ link.url }}">
                         {{ link.title }}
                     </a>
+
                     {% if link.links != blank %}
                         <span class="nav-dropdown">
                         {% for childlink in link.links %}

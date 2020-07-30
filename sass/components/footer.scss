@@ -4,28 +4,26 @@ footer {
     padding: 1rem 3.125rem 2.5rem;
 
     #footer-menus {
-        .menu li a {
-            font-size: 1.25rem;
-            line-height: 2.313rem;
-            letter-spacing: 0;
-        }
+        .menu {
+            li a {
+                font-size: 1.25rem;
+                line-height: 2.313rem;
+                letter-spacing: 0;
+            }
 
-        .menu .nav-dropdown a {
-            font-family: var(--sans-serif);
-            font-weight: 100;
-            font-size: 1rem;
-            line-height: 1.188rem;
-            letter-spacing: 0;
-        }
+            .nav-dropdown a {
+                font-family: var(--sans-serif);
+                font-weight: 100;
+                font-size: 1rem;
+                line-height: 1.188rem;
+                letter-spacing: 0;
+            }
 
-        .menu li.nav-item {
-            display: flex;
-            flex-flow: column;
-            padding: 0 0 0.5rem;
-        }
-
-        .menu .nav-dropdown {
-            display: grid;
+            li.nav-item {
+                display: flex;
+                flex-flow: column;
+                padding: 0 0 0.5rem;
+            }
         }
     }
 
@@ -50,9 +48,74 @@ footer {
             display: inline-flex;
             align-items: center;
 
-            .social-media-link {
-                padding: 0.125rem 0.875rem 0 0;
-            }
+            .social-media-link { padding: 0.125rem 0.875rem 0 0; }
         }
     }
 }
+
+/*========== Show/Hide Nav Dropdown Start ==========*/
+footer {
+    .nav-container {
+        position: relative;
+
+        input { display: none; }
+
+        label {
+            cursor: pointer;
+            display: inline-block;
+            position: absolute;
+            right: 0;
+            top: 20px;
+            user-select: none;
+
+            .navicon {
+                background: var(--white);
+                display: block;
+                width: 11px;
+                height: 2px;
+                position: relative;
+                transition: all .4s ease-in-out;
+
+                &:before,
+                &:after {
+                    content: '';
+                    display: block;
+                    position: absolute;
+                    background-color: var(--white);
+                    transition: transform 0.25s ease-out;
+                }
+
+                /* Vertical line */
+                &:before{
+                    top: 0;
+                    left: 50%;
+                    width: 2px;
+                    height: 100%;
+                    margin-left: -1px;
+                }
+
+                /* Horizontal line */
+                &:after {
+                    top: 50%;
+                    left: 0;
+                    width: 100%;
+                    height: 2px;
+                    margin-top: -1px;
+                    transform: rotate(90deg);
+                }
+            }
+        }
+
+        input:checked + label > .navicon {
+            cursor: pointer;
+            
+            &:before { transform: rotate(90deg); }
+            &:after { transform: rotate(180deg); }
+        }
+
+        input + label + .has-dropdown > .nav-dropdown { display: none; }
+        
+        input:checked + label + .has-dropdown > .nav-dropdown { display: grid; }
+    }
+}
+/*========== Show/Hide Nav Dropdown End ============*/
