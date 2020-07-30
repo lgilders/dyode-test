@@ -124,6 +124,53 @@
 }
 /*========== Featured Section End ++==========*/
 
+/*========== Instagram Section Start ==========*/
+#instagram-section {
+    padding: 1.5rem 0.75rem 1.875rem;
+
+    @media (min-width: 64rem) {
+        padding: 3.5rem 3.75rem 3.75rem;
+    }
+
+    h1 {
+        font-size: 1.25rem;
+        line-height: 2.313rem;
+        letter-spacing: 0;
+        text-align: center;
+
+        @media (min-width: 64rem) {
+            font-size: 2.188rem;
+            line-height: 4.063rem;
+        }
+    }
+
+    #instagram-wrapper {
+        display: flex;
+
+        .instagram-block {
+            @media (min-width: 64rem) {
+                margin-right: 1.25rem;
+            }
+        }
+
+        .instagram-block:last-child { 
+            @media (min-width: 64rem) {
+                margin-right: 0;
+            } 
+        }
+    }
+
+    .slick-slide {
+        margin: 0  0.25rem;
+    }
+
+    .slick-list {
+        margin: 0  0.25rem;
+    }
+}
+
+/*========== Instagram Section Start ==========*/
+
 /*========== Newsletter Section Start ==========*/
 #newsletter-section {
     background-color: var(--primary);
