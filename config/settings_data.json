@@ -1,6 +1,117 @@
 {
-  "current": "Default",
+  "current": {
+    "social_twitter_link": "",
+    "social_facebook_link": "",
+    "social_instagram_link": "",
+    "gb_enable": true,
+    "gb_background_color": "#000000",
+    "gb_text_color": "#ffffff",
+    "gb_copy": "FREE SHIPPING ON ALL ORDERS OVER $75",
+    "checkout_header_image": "",
+    "checkout_logo_image": "",
+    "checkout_logo_position": "left",
+    "checkout_logo_size": "medium",
+    "checkout_body_background_image": "",
+    "checkout_body_background_color": "#fff",
+    "checkout_input_background_color_mode": "white",
+    "checkout_sidebar_background_image": "",
+    "checkout_sidebar_background_color": "#fafafa",
+    "checkout_heading_font": "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'",
+    "checkout_body_font": "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'",
+    "checkout_accent_color": "#197bbd",
+    "checkout_button_color": "#197bbd",
+    "checkout_error_color": "#e32c2b",
+    "sections": {
+      "global-banner": {
+        "type": "global-banner",
+        "settings": {
+        }
+      },
+      "header": {
+        "type": "header",
+        "settings": {
+          "logo": "shopify:\/\/shop_images\/logo.png",
+          "menu": "main-menu",
+          "cart_icon": "shopify:\/\/shop_images\/cart-icon.png"
+        }
+      },
+      "footer": {
+        "type": "footer",
+        "settings": {
+        }
+      },
+      "1596081003900": {
+        "type": "homepage-collections",
+        "blocks": {
+          "1596081007003": {
+            "type": "block",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/woman-in-tshirt.jpg",
+              "mobile_image": "",
+              "image_alt_text": "Woman in t-shirt",
+              "cta_text": "Womens",
+              "cta_link": "#"
+            }
+          },
+          "1596081028604": {
+            "type": "block",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/man-in-tshirt.jpg",
+              "mobile_image": "",
+              "image_alt_text": "Man in t-shirt",
+              "cta_text": "Mens",
+              "cta_link": "#"
+            }
+          },
+          "1596081053517": {
+            "type": "block",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/woman-with-purse-desktop.jpg",
+              "mobile_image": "shopify:\/\/shop_images\/woman-with-purse.jpg",
+              "image_alt_text": "Woman with purse",
+              "cta_text": "Accessories",
+              "cta_link": "#"
+            }
+          }
+        },
+        "block_order": [
+          "1596081007003",
+          "1596081028604",
+          "1596081053517"
+        ],
+        "settings": {
+        }
+      },
+      "1596081322056": {
+        "type": "homepage-featured",
+        "settings": {
+          "image": "shopify:\/\/shop_images\/woman-on-sofa.jpg",
+          "image_alt_text": "Woman on sofa",
+          "headline": "Title Goes Here",
+          "subheading": "Tagline will go here.",
+          "cta_text": "Shop Now",
+          "cta_link": "#"
+        }
+      },
+      "1596081348701": {
+        "type": "homepage-newsletter",
+        "settings": {
+          "image": "shopify:\/\/shop_images\/mail-icon.png",
+          "headline": "Sign up & stay connected",
+          "subheading": "Sign up for the newsletter and get 20% off! Get access to exclusive offers and be the first to know when new stuff drops.",
+          "placeholder_text": "Your Email Address",
+          "cta_text": "Subscribe"
+        }
+      }
+    },
+    "content_for_index": [
+      "1596081003900",
+      "1596081322056",
+      "1596081348701"
+    ]
+  },
   "presets": {
-    "Default": { }
+    "Default": {
+    }
   }
 }

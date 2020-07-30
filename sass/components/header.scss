@@ -1,12 +1,29 @@
 header {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     background-color: var(--primary);
-    padding: 0.5rem 1rem;
+    padding: 0.5rem 1.25rem;
+    transition: all 0.4s ease-in-out;
 
-    #desktop-navigation {
-        display: inline-flex;
+    @media (min-width: 64rem) {
+        justify-content: center;
+    }
+
+    .logo img {
+        max-width: 54px;
+
+        @media (min-width: 64rem) {
+            max-width: initial;
+        }
+    }
+
+    .nav-container {
+        display: flex;
+
+        @media (min-width: 64rem) {
+            display: inline-flex;
+        }
 
         li a {
             padding: 0 0 0 2.5rem;
@@ -18,4 +35,117 @@ header {
             text-transform: capitalize;
         }
     }
+
+    .cart-icon {
+        max-width: 11px;
+    }
 }
+
+/*========== Show/Hide Desktop/Mobile Start ==========*/
+header.mobile-only {
+    display: flex;
+
+    @media (min-width: 64rem) {
+        display: none;
+    }
+
+    .menu {
+        display: none;
+        clear: both;
+        max-height: 0;
+        transition: all 0.4s ease-in-out;
+    }
+}
+
+header.desktop-only {
+    display: none;
+
+    @media (min-width: 64rem) {
+        display: flex;
+    }
+}
+/*========== Show/Hide Desktop/Mobile End ============*/
+
+/*========== Mobile Icon Start ==========*/
+header {
+    .menu-icon {
+        cursor: pointer;
+        display: inline-block;
+        position: relative;
+        user-select: none;
+    }
+    
+    .menu-icon .navicon {
+        background: var(--white);
+        display: block;
+        height: 2px;
+        position: relative;
+        transition: all .4s ease-in-out;
+        width: 18px;
+    }
+    
+    .menu-icon .navicon:before,
+    .menu-icon .navicon:after {
+        background: var(--white);
+        content: '';
+        display: block;
+        height: 100%;
+        position: absolute;
+        transition: all .4s ease-in-out;
+        width: 100%;
+    }
+    
+    .menu-icon .navicon:before {
+        top: 5px;
+    }
+    
+    .menu-icon .navicon:after {
+        top: -5px;
+    }
+}
+/*========== Mobile Icon End ============*/
+
+/*========== Mobile Button Start ============*/
+header{
+    .menu-btn {
+        display: none;
+    }
+    
+    .menu-btn:checked ~ .menu {
+        display: block;
+        max-height: 800px;
+        position: absolute;
+        top: 5rem;
+        left: 0;
+        padding: 0 0 1.5rem;
+        background-color: var(--primary);
+        width: 100%;
+        z-index: 10;
+
+        .nav-container {
+            display: block;
+
+            .nav-item { 
+                padding: 1rem 0;
+            }
+        }
+    }
+    
+    .menu-btn:checked ~ .menu-icon .navicon {
+        background: transparent;
+    }
+    
+    .menu-btn:checked ~ .menu-icon .navicon:before {
+        transform: rotate(-45deg);
+    }
+    
+    .menu-btn:checked ~ .menu-icon .navicon:after {
+        transform: rotate(45deg);
+    }
+    
+    .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:before,
+    .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
+        top: 0;
+    }
+}
+/*========== Mobile Button End ==============*/

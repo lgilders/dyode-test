@@ -3,32 +3,71 @@ This is a required section for the Shopify Theme Store.
 It is available in the "Header" section in the theme editor.
 {%- endcomment -%}
 
-<header>
+<header class="desktop-only">
+    {% comment %} Logo {% endcomment %}
     <div class="logo">
         <img src="{{ section.settings.logo | img_url: 'master' }}" />    
     </div>
 
-    {% comment %} Desktop Navigation {% endcomment %}
-    <nav role="navigation">
-    <ul id="desktop-navigation">
-        {% for link in linklists[section.settings.menu].links %}
-            <li class="nav-item {% if link.links != blank %} has-dropdown{% endif %} {% if forloop.index == 6 or forloop.index == 8 %} nav-divider{% endif %}">
-            <a href="{{ link.url }}">
-                {{ link.title }}
-            </a>
-            {% if link.links != blank %}
-                <span class="nav-dropdown">
-                {% for childlink in link.links %}
-                    <a href="{{ childlink.url }}">
-                        {{ childlink.title }}
-                    </a>
-                    {% endfor %}
-                </span>
-            {% endif %}
-            </li>
-        {% endfor %}
-    </ul>
+    {% comment %} Main Menu {% endcomment %}
+    <nav role="navigation" class="menu">
+        <ul class="nav-container">
+            {% for link in linklists[section.settings.menu].links %}
+                <li class="nav-item {% if link.links != blank %} has-dropdown{% endif %} {% if forloop.index == 6 or forloop.index == 8 %} nav-divider{% endif %}">
+                <a href="{{ link.url }}">
+                    {{ link.title }}
+                </a>
+                {% if link.links != blank %}
+                    <span class="nav-dropdown">
+                    {% for childlink in link.links %}
+                        <a href="{{ childlink.url }}">
+                            {{ childlink.title }}
+                        </a>
+                        {% endfor %}
+                    </span>
+                {% endif %}
+                </li>
+            {% endfor %}
+        </ul>
     </nav>
+</header>
+
+<header class="mobile-only">
+    {% comment %} Mobile Menu {% endcomment %}
+    <input class="menu-btn" type="checkbox" id="menu-btn" />
+    <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
+
+    {% comment %} Main Menu {% endcomment %}
+    <nav role="navigation" class="menu">
+        <ul class="nav-container">
+            {% for link in linklists[section.settings.menu].links %}
+                <li class="nav-item {% if link.links != blank %} has-dropdown{% endif %} {% if forloop.index == 6 or forloop.index == 8 %} nav-divider{% endif %}">
+                <a href="{{ link.url }}">
+                    {{ link.title }}
+                </a>
+                {% if link.links != blank %}
+                    <span class="nav-dropdown">
+                    {% for childlink in link.links %}
+                        <a href="{{ childlink.url }}">
+                            {{ childlink.title }}
+                        </a>
+                        {% endfor %}
+                    </span>
+                {% endif %}
+                </li>
+            {% endfor %}
+        </ul>
+    </nav>
+
+    {% comment %} Logo {% endcomment %}
+    <div class="logo">
+        <img src="{{ section.settings.logo | img_url: 'master' }}" />    
+    </div>
+
+    {% comment %} Cart Icon {% endcomment %}
+    <div class="cart-icon mobile-only">
+        <img src="{{ section.settings.cart_icon | img_url: 'master' }}" />    
+    </div>
 </header>
 
 
@@ -46,6 +85,11 @@ It is available in the "Header" section in the theme editor.
     "id": "menu",
     "label": "Menu",
     "default": "main-menu"
+    },
+    {
+    "type": "image_picker",
+    "id": "cart_icon",
+    "label": "Cart icon"
     }
 ]
 }

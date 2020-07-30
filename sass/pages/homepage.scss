@@ -3,7 +3,7 @@
     position: relative;
     padding: 0 15px;
 
-    @media (min-width: 1024px) {
+    @media (min-width: 64rem) {
         padding: 0 1.75rem;
     }
 
@@ -12,7 +12,7 @@
         flex-wrap: wrap;
         margin-left: -15px;
 
-        @media (min-width: 1024px) {
+        @media (min-width: 64rem) {
             margin-left: -40px;
         }
     }
@@ -24,14 +24,14 @@
 
         &:last-child { flex: 1 }
 
-        @media (min-width: 1024px) {
+        @media (min-width: 64rem) {
             flex: 0 0 calc(33.333% - 40px);
             margin: 0 0 40px 40px;
         }
 
         .desktop-img { display: none; }
 
-        @media (min-width: 1024px) {
+        @media (min-width: 64rem) {
             .desktop-img { display: block; }
             .mobile-img { display: none; }
         }
@@ -46,7 +46,7 @@
         padding: 0.1875rem;
         text-align: center;
 
-        @media (min-width: 1024px) {
+        @media (min-width: 64rem) {
             font-size: 3.125rem;
             line-height: 5.813rem;
             padding: 0.5625rem;
@@ -60,7 +60,7 @@
     min-height: 227px;
     position: relative;
 
-    @media (min-width: 1024px) {
+    @media (min-width: 64rem) {
         min-height: 638px;
     }
 
@@ -72,7 +72,7 @@
         right: 50%;
         transform: translate(100%, -50%);
 
-        @media (min-width: 1024px) {
+        @media (min-width: 64rem) {
             padding-left: 8rem;
         }
     }
@@ -84,7 +84,7 @@
         letter-spacing: 0;
         text-transform: capitalize;
 
-        @media (min-width: 1024px) {
+        @media (min-width: 64rem) {
             font-size: 3.125rem;
             line-height: 5.813rem;
         }
@@ -96,7 +96,7 @@
         line-height: 1.188rem;
         letter-spacing: 0;
 
-        @media (min-width: 1024px) {
+        @media (min-width: 64rem) {
             font-size: 2.5rem;
             line-height: 3rem;
         }
@@ -114,7 +114,7 @@
         letter-spacing: 0;
         text-transform: uppercase;
 
-        @media (min-width: 1024px) {
+        @media (min-width: 64rem) {
             top: 3.5rem;
             padding: 0.8125rem 1.875rem;
             font-size: 1.25rem;
@@ -131,12 +131,12 @@
     text-align: center;
     padding: 1rem 1rem 1.563rem;
 
-    @media (min-width: 1024px) {
+    @media (min-width: 64rem) {
         padding: 4rem 6rem 4.5rem;
     }
 
     .newsletter-heading {
-        @media (min-width: 1024px) {
+        @media (min-width: 64rem) {
             display: flex;
             justify-content: center;
             align-items: center;
@@ -145,7 +145,7 @@
     }
 
     .newsletter-signup {
-        @media (min-width: 1024px) {
+        @media (min-width: 64rem) {
             display: flex;
             justify-content: center;
             align-items: center;
@@ -157,7 +157,7 @@
         max-width: 1.063rem;
         margin: 0 auto;
 
-        @media (min-width: 1024px) {
+        @media (min-width: 64rem) {
             max-width: 2.25rem;
             margin-right: 1rem;
         }
@@ -168,7 +168,7 @@
         line-height: 2.313rem;
         letter-spacing: 0;
 
-        @media (min-width: 1024px) {
+        @media (min-width: 64rem) {
             font-size: 2.188rem;
             line-height: 4.063rem;
         }
@@ -181,7 +181,7 @@
         letter-spacing: 0;
         padding: 0.875rem 1.5rem;
 
-        @media (min-width: 1024px) {
+        @media (min-width: 64rem) {
             font-size: 1.25rem;
             line-height: 1.5rem;
             margin-right: 1.75rem;
@@ -203,7 +203,7 @@
             max-width: 255px;
             margin-right: 0.5rem;
 
-            @media (min-width: 1024px) {
+            @media (min-width: 64rem) {
                 padding: 1rem;
                 min-width: 334px;
             }
@@ -222,7 +222,7 @@
             letter-spacing: 0;
             text-transform: capitalize;
 
-            @media (min-width: 1024px) {
+            @media (min-width: 64rem) {
                 border-width: 0.1875rem;
                 max-width: 169px;
                 font-size: 1.25rem;
@@ -237,16 +237,11 @@
             letter-spacing: 0;
             padding: 0 0 1rem;
 
-            @media (min-width: 1024px) {
+            @media (min-width: 64rem) {
                 font-size: 1rem;
                 line-height: 1.188rem;
             }
         }
     }
-
 }
-
-
-
-
 /*========== Newsletter Section End ============*/
