@@ -16,29 +16,14 @@
         "content":"Social Sharing"
       },
       {
-        "type": "image",
-        "id": "social_twitter_icon",
-        "label": "Twitter icon"
-      },
-      {
         "type": "text",
         "id": "social_twitter_link",
         "label": "Twitter link"
       },
       {
-        "type": "image",
-        "id": "social_facebook_icon",
-        "label": "Facebook icon"
-      },
-      {
         "type": "text",
         "id": "social_facebook_link",
         "label": "Facebook link"
-      },
-      {
-        "type": "image",
-        "id": "social_instagram_icon",
-        "label": "Instagram icon"
       },
       {
         "type": "text",
