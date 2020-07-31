@@ -132,6 +132,43 @@ main { position: relative; }
 
     .text-align-right { text-align: right; }
 
+    ul.slick-dots {
+        position: relative;
+        display: flex !important;
+        justify-content: center;
+        bottom: 2rem;
+
+        @media (min-width: 64rem) {
+            bottom: 4.125rem;
+        }
+
+        li button {
+            width: 12px;
+            height: 12px;
+            font-size: 0;
+            border: none;
+            background: var(--quaternary);
+            opacity: 0.7;
+            margin: 0 0.5rem 0 0;
+            cursor: pointer;
+
+            @media (min-width: 64rem) {
+                width: 26px;
+                height: 26px;
+                margin: 0 1rem 0 0;
+            }
+
+            &:focus, &:active {
+                outline: none;
+                border: none;
+            }
+        }
+
+        li.slick-active button {
+            background: var(--white);
+            opacity: 1;
+        }
+    }
 }
 /*========== Hero Section End ============*/
 

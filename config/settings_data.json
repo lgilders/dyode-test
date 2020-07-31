@@ -112,11 +112,11 @@
       "1596145535223": {
         "type": "homepage-instagram",
         "blocks": {
-          "1596145541274": {
+          "1596145559571": {
             "type": "block",
             "settings": {
-              "image": "shopify:\/\/shop_images\/pexels-spencer-selover-428338.jpg",
-              "image_alt_text": "Woman in t-shirt",
+              "image": "shopify:\/\/shop_images\/pexels-burst-374808.jpg",
+              "image_alt_text": "Woman wearing headphones",
               "link": "#"
             }
           },
@@ -136,11 +136,11 @@
               "link": "#"
             }
           },
-          "1596145559571": {
+          "1596145541274": {
             "type": "block",
             "settings": {
-              "image": "shopify:\/\/shop_images\/pexels-burst-374808.jpg",
-              "image_alt_text": "Woman wearing headphones",
+              "image": "shopify:\/\/shop_images\/pexels-spencer-selover-428338.jpg",
+              "image_alt_text": "Woman in t-shirt",
               "link": "#"
             }
           },
@@ -163,9 +163,115 @@
         "settings": {
           "headline": "Follow Us on Instagram!"
         }
+      },
+      "1596156426055": {
+        "type": "homepage-hero",
+        "blocks": {
+          "1596156431126": {
+            "type": "block",
+            "settings": {
+              "desktop_image": "shopify:\/\/shop_images\/pexels-craig-mckay-842943.jpg",
+              "mobile_image": "",
+              "clickable_banner": false,
+              "text_position": "position-center-left",
+              "text_align": "text-align-left",
+              "headline": "Title Goes Here",
+              "headline_color": "#ffffff",
+              "subheading": "Tagline will go right here.",
+              "subheading_color": "#ffffff",
+              "cta_button": true,
+              "cta_text": "Shop Now",
+              "cta_url": "#",
+              "cta_text_color": "#ffffff",
+              "cta_text_color_hover": "#000000",
+              "cta_color": "#000000",
+              "cta_color_hover": "#ffffff",
+              "cta_border_color": "#000000",
+              "cta_border_color_hover": "#ffffff"
+            }
+          },
+          "1596156450607": {
+            "type": "block",
+            "settings": {
+              "desktop_image": "shopify:\/\/shop_images\/pexels-anna-shvets-4557396.jpg",
+              "mobile_image": "",
+              "clickable_banner": false,
+              "text_position": "position-top-right",
+              "text_align": "text-align-left",
+              "headline": "Title Goes Here",
+              "headline_color": "#ffffff",
+              "subheading": "Tagline will go right here.",
+              "subheading_color": "#ffffff",
+              "cta_button": true,
+              "cta_text": "Shop Now",
+              "cta_url": "#",
+              "cta_text_color": "#ffffff",
+              "cta_text_color_hover": "#000000",
+              "cta_color": "#000000",
+              "cta_color_hover": "#ffffff",
+              "cta_border_color": "#000000",
+              "cta_border_color_hover": "#ffffff"
+            }
+          },
+          "1596156455849": {
+            "type": "block",
+            "settings": {
+              "desktop_image": "shopify:\/\/shop_images\/pexels-vjapratama-1179975.jpg",
+              "mobile_image": "",
+              "clickable_banner": false,
+              "text_position": "position-center-center",
+              "text_align": "text-align-center",
+              "headline": "Title Goes Here",
+              "headline_color": "#ffffff",
+              "subheading": "Tagline will go right here.",
+              "subheading_color": "#ffffff",
+              "cta_button": true,
+              "cta_text": "Shop Now",
+              "cta_url": "#",
+              "cta_text_color": "#ffffff",
+              "cta_text_color_hover": "#000000",
+              "cta_color": "#000000",
+              "cta_color_hover": "#ffffff",
+              "cta_border_color": "#000000",
+              "cta_border_color_hover": "#ffffff"
+            }
+          },
+          "1596156459522": {
+            "type": "block",
+            "settings": {
+              "desktop_image": "shopify:\/\/shop_images\/pexels-godisable-jacob-963696.jpg",
+              "mobile_image": "",
+              "clickable_banner": false,
+              "text_position": "position-top-right",
+              "text_align": "text-align-right",
+              "headline": "Title Goes Here",
+              "headline_color": "#ffffff",
+              "subheading": "Tagline will go right here.",
+              "subheading_color": "#ffffff",
+              "cta_button": true,
+              "cta_text": "Shop Now",
+              "cta_url": "#",
+              "cta_text_color": "#ffffff",
+              "cta_text_color_hover": "#000000",
+              "cta_color": "#000000",
+              "cta_color_hover": "#ffffff",
+              "cta_border_color": "#000000",
+              "cta_border_color_hover": "#ffffff"
+            }
+          }
+        },
+        "block_order": [
+          "1596156431126",
+          "1596156450607",
+          "1596156455849",
+          "1596156459522"
+        ],
+        "settings": {
+        }
       }
     },
     "content_for_index": [
+      "1596156426055",
       "1596081003900",
       "1596081322056",
       "1596145535223",
