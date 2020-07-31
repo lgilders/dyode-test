@@ -10,7 +10,7 @@
   {{ content_for_header }} <!-- Header hook for plugins -->
   <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script> <!-- Required for slick slider -->
   <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script> <!-- Required for slick slider -->
-  {{ 'scripts.js' | asset_url | script_tag }} <!-- Behavior for site -->
+  {{ 'scripts.min.js' | asset_url | script_tag }} <!-- Behavior for site -->
   {{ 'styles.css' | asset_url | stylesheet_tag }} <!-- Styles for site -->
   <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/> <!-- Styles for slick slider -->
 </head>

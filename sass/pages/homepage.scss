@@ -1,3 +1,140 @@
+main { position: relative; }
+
+/*========== Hero Section Start ==========*/
+#hero-section {
+    .mobile-only {
+        display: block;
+        position: relative;
+        min-height: 227px;
+
+        @media (min-width: 64rem) {
+            display: none;
+        }
+    }
+
+    .desktop-only {
+        display: none;
+        position: relative;
+        min-height: 638px;
+
+        @media (min-width: 64rem) {
+            display: block;
+        }
+    }
+
+    .hero-block {
+        position: relative;
+        display: block;
+    }
+
+    .hero-content {
+        position: absolute;
+        display: block;
+        top: 0;
+        padding: 1.25rem;
+
+        @media (min-width: 64rem) {
+            padding: 1.25rem 4.75rem;
+        }
+
+        h1 {
+            font-size: 1.25rem;
+            line-height: 2.313rem;
+            letter-spacing: 0;
+
+            @media (min-width: 64rem) {
+                font-size: 3.125rem;
+                line-height: 5.813rem;
+            }
+        }
+
+        h2 {
+            font-size: 1rem;
+            line-height: 1.188rem;
+            letter-spacing: 0;
+            padding: 0 0 1.125rem;
+
+            @media (min-width: 64rem) {
+                font-size: 2.5rem;
+                line-height: 3rem;
+                padding: 0 0 3.125rem;
+            }
+        }
+
+        a {
+            font-family: var(--sans-serif);
+            font-weight: 700;
+            font-size: 0.5rem;
+            line-height: 0.625rem;
+            letter-spacing: 0;
+            padding: 0.5rem 1.125rem;
+            text-align: center;
+            text-transform: uppercase;
+
+            @media (min-width: 64rem) {
+                font-size: 1.25rem;
+                line-height: 1.5rem;
+            }
+        }
+    }
+
+    // Positions for Hero Banner
+    .position-top-left {
+        top: 0;
+    }
+
+    .position-top-center {
+        left: 30%;
+    }
+
+    .position-top-right {
+        right: 0;
+    }
+
+    .position-center-left {
+        top: 50%;
+        transform: translate(0, -50%);
+    }
+
+    .position-center-center {
+        top: 50%;
+        left: 30%;
+        transform: translate(0, -50%);
+    }
+
+    .position-center-right {
+        top: 50%;
+        right: 0;
+        transform: translate(0, -50%);
+    }
+
+    .position-bottom-left {
+        top: 90%;
+        transform: translate(0, -100%);
+    }
+
+    .position-bottom-center {
+        top: 90%;
+        left: 30%;
+        transform: translate(0, -100%);
+    }
+
+    .position-bottom-right {
+        top: 90%;
+        right: 0;
+        transform: translate(0, -100%);    
+    }
+    
+    // Text Alignment for Hero Banner
+    .text-align-left { text-align: left; }
+
+    .text-align-center { text-align: center; }
+
+    .text-align-right { text-align: right; }
+
+}
+/*========== Hero Section End ============*/
+
 /*========== Collections Section Start ==========*/
 #collections-section {
     position: relative;

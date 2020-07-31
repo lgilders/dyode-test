@@ -1,8 +1,8 @@
 {
   "current": {
-    "social_twitter_link": "",
-    "social_facebook_link": "",
-    "social_instagram_link": "",
+    "social_twitter_link": "#",
+    "social_facebook_link": "#",
+    "social_instagram_link": "#",
     "gb_enable": true,
     "gb_background_color": "#000000",
     "gb_text_color": "#ffffff",
@@ -38,6 +38,12 @@
       "footer": {
         "type": "footer",
         "settings": {
+          "menu_first": "footer-menu-1",
+          "menu_second": "footer-menu-2",
+          "social_media_label": "Follow Us",
+          "social_facebook_icon": "shopify:\/\/shop_images\/facebook-icon.png",
+          "social_instagram_icon": "shopify:\/\/shop_images\/instagram-icon.png",
+          "social_twitter_icon": "shopify:\/\/shop_images\/twitter-icon.png"
         }
       },
       "1596081003900": {
@@ -102,11 +108,67 @@
           "placeholder_text": "Your Email Address",
           "cta_text": "Subscribe"
         }
+      },
+      "1596145535223": {
+        "type": "homepage-instagram",
+        "blocks": {
+          "1596145541274": {
+            "type": "block",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/pexels-spencer-selover-428338.jpg",
+              "image_alt_text": "Woman in t-shirt",
+              "link": "#"
+            }
+          },
+          "1596145551435": {
+            "type": "block",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/pexels-andi-risam-triangga-3580656.jpg",
+              "image_alt_text": "Couple",
+              "link": "#"
+            }
+          },
+          "1596145555433": {
+            "type": "block",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/pexels-wendy-wei-2769172.jpg",
+              "image_alt_text": "Man in t-shirt",
+              "link": "#"
+            }
+          },
+          "1596145559571": {
+            "type": "block",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/pexels-burst-374808.jpg",
+              "image_alt_text": "Woman wearing headphones",
+              "link": "#"
+            }
+          },
+          "1596145563306": {
+            "type": "block",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/pexels-marlene-leppanen-1019771.jpg",
+              "image_alt_text": "Men sitting on wall",
+              "link": "#"
+            }
+          }
+        },
+        "block_order": [
+          "1596145559571",
+          "1596145551435",
+          "1596145555433",
+          "1596145541274",
+          "1596145563306"
+        ],
+        "settings": {
+          "headline": "Follow Us on Instagram!"
+        }
       }
     },
     "content_for_index": [
       "1596081003900",
       "1596081322056",
+      "1596145535223",
       "1596081348701"
     ]
   },

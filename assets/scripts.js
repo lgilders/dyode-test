@@ -1,4 +1,5 @@
 $(document).ready(() => {
+    var $hero = $('#hero-wrapper'); // Hero section
     var $instagram = $('#instagram-wrapper'); // Instagram section
 
     initCarousel();
@@ -26,7 +27,20 @@ $(document).ready(() => {
                     ]
                 });
             }
-        })
+        });
+
+        $hero.each(function() { 
+            if (!$(this).hasClass('slick-initialized')) {
+                $(this).slick({
+                    dots: true,
+                    arrows: false,
+                    infinite: true,
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    mobileFirst: true,
+                    adaptiveHeight: true
+                });
+            }
+        });
     }
 });
-
