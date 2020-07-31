@@ -74,6 +74,7 @@ main { position: relative; }
             @media (min-width: 64rem) {
                 font-size: 1.25rem;
                 line-height: 1.5rem;
+                padding: 0.75rem 1.5rem;
             }
         }
     }
@@ -228,6 +229,119 @@ main { position: relative; }
     }
 }
 /*========== Collections Section End ============*/
+
+/*========== Featured Products Section Start ============*/
+#featured-products-section {
+    position: relative;
+    text-align: center;
+    padding: 0.75rem 2rem 1rem;
+
+    @media (min-width: 64rem) {
+        padding: 0.75rem 2rem 2.5rem;
+    }
+
+    h1 {
+        font-size: 1.25rem;
+        line-height: 2.313rem;
+        letter-spacing: 0;
+
+        @media (min-width: 64rem) {
+            font-size: 2.188rem;
+            line-height: 4.063rem;
+        }
+    }
+
+    .grid-view-item__image-wrapper img {
+        margin: 0 auto;
+    }
+
+    .grid-view-item {
+        .h4 {
+            color: var(--black);
+            padding: 1rem 0 0;
+            font-weight: 300;
+            font-size: 1rem;
+            line-height: 1.188rem;
+            letter-spacing: 0;
+            text-transform: capitalize;
+
+            @media (min-width: 64rem) {
+                font-size: 1.125rem;
+                line-height: 1.375rem;
+            }
+        }
+
+        .product-type {
+            color: var(--black);
+            font-family: var(--sans-serif);
+            font-weight: 100;
+            font-size: 0.75rem;
+            line-height: 0.9375rem;
+            letter-spacing: 0;
+
+            @media (min-width: 64rem) {
+                font-size: 1rem;
+                line-height: 1.188rem;
+            }
+        }
+
+        .product-price__price {
+            color: var(--primary);
+            font-family: var(--serif);
+            font-size: 1rem;
+            line-height: 1.875rem;
+
+            @media (min-width: 64rem) {
+                font-size: 1.375rem;
+                line-height: 2.563rem;
+            }
+        }
+    }
+
+    .slick-slider { 
+        padding: 0 0.5rem; 
+
+        @media (min-width: 64rem) {
+            padding: 0 2rem;
+        }
+    }
+
+    .slick-slide, .slider-arrow {
+        &:focus, &:active { 
+            outline: none;
+            border: none;
+        }
+    }
+
+    #slider-arrows {
+        display: inline-flex;
+        z-index: 10;
+
+        #prev img, #next img {
+            width: 13px;
+            height: 15px;
+            cursor: pointer;
+
+            @media (min-width: 47.94rem) {
+                width: 23px;
+                height: 26px;
+            }
+        }
+
+        #prev {
+            position: absolute;
+            top: 50%;
+            left: 1rem;
+        }
+
+        #next {
+            position: absolute;
+            top: 50%;
+            right: 1rem;
+        }
+    }
+}
+/*========== Featured Products Section End ==============*/
 
 /*========== Featured Section Start ==========*/
 #featured-section {

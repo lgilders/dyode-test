@@ -1,0 +1,55 @@
+<section id="featured-products-section">
+    <h1>{{ section.settings.headline }}</h1>
+
+    <div id="slider-arrows">
+        <div id="prev">
+            <img src="{{ 'left-arrow.png' | file_url }}" />
+        </div>
+        <div id="next">
+            <img src="{{ 'right-arrow.png' | file_url }}" />
+        </div>
+    </div>
+
+    <div id="featured-products-wrapper">
+        {% for block in section.blocks %}
+            {% include 'product-grid-item' with {
+                product: all_products[block.settings.featured_product]
+            } %}
+        {% endfor %}
+    </div>
+</section>
+
+{% schema %}
+    {
+        "name": "Featured Products",
+        "class": "index-section section-flush",
+        "max_blocks": 8,
+        "settings": [
+                {
+                    "type": "text",
+                    "id": "headline",
+                    "label": "Headline",
+                    "default": "New Arrivals"
+                }
+            ],
+        "blocks": [
+            {
+                "type": "featured-product",
+                "name": "Product",
+                "settings": [
+                    {
+                        "type": "product",
+                        "id": "featured_product",
+                        "label": "Featured Product"
+                    }
+                ]
+            }
+        ],
+        "presets": [
+            {
+            "name": "Featured Products Section",
+            "category": "Index"
+            }
+        ]
+    }
+{% endschema %}

@@ -1,0 +1,25 @@
+<div class="grid-view-item{% unless product.available %} product-price--sold-out grid-view-item--sold-out{% endunless %}">
+    <a class="grid-view-item__link grid-view-item__image-container" href="{{ product.url | within: collection }}">
+        {% capture img_id %}ProductCardImage-{{ section.id }}-{{ product.id }}{% endcapture %}
+        {% capture wrapper_id %}ProductCardImageWrapper-{{ section.id }}-{{ product.id }}{% endcapture %}
+        {%- assign img_url = product.featured_image | img_url: '1x1' | replace: '_1x1.', '_{width}x.' -%}
+
+        <div id="{{ wrapper_id }}" class="grid-view-item__image-wrapper js">
+            <img id="{{ img_id }}"
+                    class="grid-view-item__image"
+                    src="{{ product.featured_image | img_url: 'master' }}"
+                    alt="{{ product.featured_image.alt | escape }}" />
+        </div>
+
+        <noscript>
+            {% capture image_size %}{{ max_height }}x{{ max_height }}{% endcapture %}
+            <img class="grid-view-item__image" src="{{ product.featured_image.src | img_url: image_size, scale: 2 }}" alt="{{ product.featured_image.alt }}" style="max-width: {{ max_height | times: product.featured_image.aspect_ratio }}px;">
+        </noscript>
+
+        <div class="h4 grid-view-item__title">{{ product.title }}</div>
+        <div class="product-type">{{ product.type }}</div>
+        <div class="grid-view-item__meta">
+            {% include 'product-price' %}
+        </div>
+    </a>
+</div>

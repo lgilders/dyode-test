@@ -268,11 +268,78 @@
         ],
         "settings": {
         }
+      },
+      "1596170833742": {
+        "type": "homepage-featured-products",
+        "blocks": {
+          "1596170841124": {
+            "type": "featured-product",
+            "settings": {
+              "featured_product": "product-title"
+            }
+          },
+          "1596170847033": {
+            "type": "featured-product",
+            "settings": {
+              "featured_product": "product-title"
+            }
+          },
+          "1596170851333": {
+            "type": "featured-product",
+            "settings": {
+              "featured_product": "product-title"
+            }
+          },
+          "1596170855914": {
+            "type": "featured-product",
+            "settings": {
+              "featured_product": "product-title"
+            }
+          },
+          "1596170860413": {
+            "type": "featured-product",
+            "settings": {
+              "featured_product": "product-title"
+            }
+          },
+          "1596170864313": {
+            "type": "featured-product",
+            "settings": {
+              "featured_product": "product-title"
+            }
+          },
+          "1596170868662": {
+            "type": "featured-product",
+            "settings": {
+              "featured_product": "product-title"
+            }
+          },
+          "1596170872154": {
+            "type": "featured-product",
+            "settings": {
+              "featured_product": "product-title"
+            }
+          }
+        },
+        "block_order": [
+          "1596170841124",
+          "1596170847033",
+          "1596170851333",
+          "1596170855914",
+          "1596170860413",
+          "1596170864313",
+          "1596170868662",
+          "1596170872154"
+        ],
+        "settings": {
+          "headline": "New Arrivals"
+        }
       }
     },
     "content_for_index": [
       "1596156426055",
       "1596081003900",
+      "1596170833742",
       "1596081322056",
       "1596145535223",
       "1596081348701"
