@@ -1,0 +1,165 @@
+Dyode take-home test - Liquid questions
+
+1. Describe how you would make a line of text in a homepage section editable from theme customization and how you would access this in liquid.
+
+Refactor the existing HTML into a Liquid section file with a schema definition that defines adminable values, such as a line of text, using the double curly braces {{ }} notation. Then include the new Liquid file in place of the existing HTML using the curly braces and percent signs {% %} notation. The new adminable section will appear on the page template in the Online Store > Themes > Customize > Home page of the theme once the new code has been deployed.
+
+
+Example
+
+Original HTML section
+
+<div id="homepage-section">
+    <img src="/images/homepage-heading.jpg" alt="Image description goes here" />
+    <h1>Title Goes Here</h1>
+    <h3>Subtitle Goes Here</h3>
+    <p>Description text goes here</p>
+    <a href="#">Link text goes here</a>
+</div>
+
+
+New Liquid section
+
+<div id="homepage-section">
+    <img src="{{ section.settings.image | img_url: 'master' }}" alt="{{ section.settings.image_alt_text }}" />
+    <h1>{{ section.settings.headline }}</h1>
+    <h3>{{ section.settings.subheading }}</h3>
+    <p>{{ section.settings.description }}</p>
+    <a href="{{ section.settings.cta_link }}">{{ section.settings.cta_text }}</a>
+</div>
+
+{% schema %}
+{
+  "name": "Homepage Section",
+  "class": "index-section section-flush",
+  "settings": [
+	{
+	"type": "image_picker",
+	"id": "image",
+	"label": "Image"
+	},
+	{
+	"type": "text",
+	"id": "image_alt_text",
+	"label": "Image Alt Text",
+	"default": "Image description goes here"
+	},
+	{
+	  "type": "text",
+	  "id": "headline",
+	  "label": "Headline",
+	  "default": "Headline Goes Here"
+	},
+	{
+	  "type": "text",
+	  "id": "subheading",
+	  "label": "Subheading",
+	  "default": "Subheading goes here"
+	},
+	{
+	  "type": "text",
+	  "id": "description",
+	  "label": "Description",
+	  "default": "Description text goes here"
+	},
+	{
+	  "type": "text",
+	  "id": "cta_text",
+	  "label": "CTA Text",
+	  "default": "Link text goes here"
+	},
+	{
+	  "type": "url",
+	  "id": "cta_link",
+	  "label": "CTA Link"
+	}
+  ],
+  "presets": [
+    {
+    "name": "Homepage Section",
+    "category": "Index"
+    }
+  ]
+}
+{% endschema %}
+
+
+
+2. How would you add the collection featured image as a banner on the collection liquid template?
+
+Capture the collection image in a Liquid variable and output it in the banner section of the page template. Alternately, skip the assignment and target the collection image directly in the output. From a safety perspective, it may behoove the developer to craft a fallback in case the site administrator forgets to include a featured image for a collection in the admin. In this case, targeting the first product's image allows for a graceful fallback. Another safety case would be to ensure that the captured image exists prior to attempting to output the value in the banner section.
+
+
+Examples
+
+{%- assign featured_image = collection.image -%}
+<img src="{{ featured_image | img_url: 'master' }}" alt="{{ featured_image.alt | escape }}" />
+
+OR
+
+<img src="{{ collection.image | img_url: 'master' }}" alt="{{ collection.image.alt | escape }}" />
+
+
+Fallback Example
+{% if collection.image != blank or collection.products.first != blank %}
+	{%- assign featured_image = collection.image | default: collection.products.first.featured_image -%}
+
+	<img src="{{ featured_image | img_url: 'master' }}" alt="{{ featured_image.alt | escape }}" />
+{% endif %}
+
+
+
+3. Using liquid code and HTML, create a simple pagination container, "< 1 2 ... 5 >".
+
+{% paginate blog.articles by 5 %}
+  {% for article in blog.articles %}
+    <!-- show article details here -->
+  {% endfor %}
+
+  {{ paginate | default_pagination }}
+{% endpaginate %}
+
+
+
+4. Using liquid code, access the product named "Blue T-Shirt". Store the id, title, handle, price, url, and image in variables.
+
+{% for product in collection.products %}
+	{% if product.title == "Blue T-Shirt" %}
+		{%- assign product_id = product.id -%}
+		{%- assign product_title = product.title -%}
+		{%- assign product_handle = product.handle -%}
+		{%- assign product_price = product.price -%}
+		{%- assign product_url = product.url -%}
+		{%- assign product_featured_image = product.featured_image -%}
+		{%- assign product_images = product.images -%}
+	{% endif %}
+{% endfor %}
+
+
+5. Using liquid code, create a key:value array using the list below. Loop through the array. Upon key type, store the value in a variable to be used later:
+	fruit:apple
+	vegetable:carrot
+	cloth:t-shirt
+	denim:jeans
+
+{%- assign key_array = "fruit#vegetable#cloth#denim" | split: '#' -%}
+{%- assign value_array = "apple#carrot#t-shirt#jeans" | split: '#' -%}
+
+{% for key in key_array %}
+	{%- capture temp -%}
+		{{ value_array[forloop.index0] }} 
+	{%- endcapture -%}
+
+	{% if key == "fruit" %}
+		{%- assign fruit = temp -%}
+	{% elsif key == "vegetable" %}
+		{%- assign vegetable = temp -%}
+	{% elsif key == "cloth" %}
+		{%- assign cloth = temp -%}
+	{% elsif key == "denim" %}
+		{%- assign denim = temp -%}
+	{% else %}
+		{%- assign other = temp -%}
+	{% endif %}
+{% endfor %}
+
